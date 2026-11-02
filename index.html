@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#071524">
+<title>HeadSafe · Control ESP32</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer>
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<div class="app-shell">
+<aside class="sidebar">
+<a class="brand" href="#inicio" data-go="inicio" aria-label="HeadSafe inicio">
+<span class="brand-mark">
+<svg viewBox="0 0 28 32" aria-hidden="true">
+<path d="M14 1 26 5v9c0 8-5.1 14.1-12 17C7.1 28.1 2 22 2 14V5L14 1Z"/>
+<path d="m9 15 3 3 7-8"/>
+</svg>
+</span>
+<span>HEAD<b>SAFE</b>
+<small>CONTROL CENTER</small>
+</span>
+</a>
+<p class="nav-label">ESPACIO DE CONTROL</p>
+<nav class="nav" aria-label="Navegación principal">
+<button class="nav-item active" data-view="inicio" aria-current="page">
+<span aria-hidden="true">⌂</span>Inicio</button>
+<button class="nav-item" data-view="actividad">
+<span aria-hidden="true">⌁</span>Actividad</button>
+<button class="nav-item" data-view="dispositivo">
+<span aria-hidden="true">◇</span>Dispositivo</button>
+<a class="nav-item" href="base-informativa.html">
+<span aria-hidden="true">↗</span>Guía</a>
+</nav>
+<div class="side-device">
+<span class="mini-label">CONEXIÓN LOCAL</span>
+<b id="side-device-name">Esperando ESP32</b>
+<small>MPU6050 → ESP32 → Wi-Fi</small>
+<a href="base-informativa.html">Guía de conexión ↗</a>
+</div>
+<div class="module-label">
+<b>ESP32 + MPU6050</b>
+<small>Prototipo · alarma local</small>
+</div>
+</aside>
+<main class="main" id="main" tabindex="-1">
+<header class="topbar">
+<div>
+<p class="eyebrow" id="date-label">
+</p>
+<h1 id="page-title">Panel de control</h1>
+</div>
+<div class="top-actions">
+<span class="status-pill" id="connection-state" role="status">Esperando conexión</span>
+</div>
+</header>
+<div id="storage-warning" class="notice warning" role="status" hidden>No se pudo usar el almacenamiento local. Los cambios solo durarán esta sesión.</div>
+<section class="view active" id="view-inicio" aria-labelledby="monitor-title">
+<h2 class="sr-only" id="monitor-title">Monitor de la ESP32</h2>
+<div class="hero-card" id="monitor-card" data-state="unknown">
+<div class="hero-copy">
+<span class="live-label" id="mode-label">ESPERANDO TELEMETRÍA</span>
+<h2 id="status-title" aria-live="polite">Sin datos de la ESP32.</h2>
+<p id="status-detail">Conecta tu equipo a la red de la ESP32 y abre su panel local. Sin una lectura válida no se confirma el estado.</p>
+<div class="hero-actions">
+<button class="primary" id="reset-button" disabled>Restablecer alarma</button>
+<button class="ghost" data-go="dispositivo">Ver conexión ↗</button>
+</div>
+<p class="last-update" id="last-update">Sin lecturas recibidas</p>
+</div>
+<div class="helmet-visual">
+<div class="radar r1">
+</div>
+<div class="radar r2">
+</div>
+<img src="assets/images/headsafe-hero.webp" alt="Casco HeadSafe del diseño original con módulo ESP32" width="720" height="720">
+<span class="sensor-tag">
+<b>ESP32 + MPU6050</b>
+<small>Alarma local independiente</small>
+</span>
+</div>
+</div>
+<div class="notice" id="simulation-notice" hidden>
+<b>DEMOSTRACIÓN EN PC</b> · Datos simulados. No es una conexión al casco físico.<div class="section-actions">
+<button class="ghost" id="simulate-button">Simular impacto</button>
+<button class="ghost" id="sensor-fail-button">Simular fallo de sensor</button>
+<button class="ghost" id="sensor-recover-button">Recuperar sensor simulado</button>
+</div>
+</div>
+<div class="dashboard-grid">
+<article class="card motion-card">
+<div class="card-head">
+<div>
+<span class="card-icon blue" aria-hidden="true">⌁</span>
+<span>
+<h3>Movimiento en vivo</h3>
+<small id="sensor-source">Esperando datos</small>
+</span>
+</div>
+<span class="data-label">RAW</span>
+</div>
+<div class="motion-reading">
+<div class="gauge">
+<svg viewBox="0 0 120 70" aria-hidden="true">
+<path d="M10 62a50 50 0 0 1 100 0"/>
+<path id="gauge-path" class="gauge-active" d="M10 62a50 50 0 0 1 100 0"/>
+</svg>
+<strong id="horizontal-value">—</strong>
+<small>|ax| + |ay| · unidades crudas</small>
+</div>
+<div class="axis-list">
+<span>X <i>
+<b id="axis-x">
+</b>
+</i>
+<em id="x-val">—</em>
+</span>
+<span>Y <i>
+<b id="axis-y">
+</b>
+</i>
+<em id="y-val">—</em>
+</span>
+<span>Z <i>
+<b id="axis-z">
+</b>
+</i>
+<em id="z-val">—</em>
+</span>
+</div>
+</div>
+<div class="metric-footer">
+<span>Umbral fijo <b>65.000</b>
+</span>
+<span>Pico informado <b id="peak-value">—</b>
+</span>
+</div>
+</article>
+<article class="card quick-card">
+<div class="card-head">
+<div>
+<span class="card-icon lime" aria-hidden="true">◇</span>
+<span>
+<h3>Estado del módulo</h3>
+<small>No evalúa el estado de una persona</small>
+</span>
+</div>
+</div>
+<dl class="telemetry">
+<div>
+<dt>Sensor MPU6050</dt>
+<dd id="sensor-state">Desconocido</dd>
+</div>
+<div>
+<dt>Alarma de la ESP32</dt>
+<dd id="alarm-state">Desconocida</dd>
+</div>
+<div>
+<dt>Tiempo encendida</dt>
+<dd id="uptime-value">—</dd>
+</div>
+<div>
+<dt>Reinicios remotos restantes</dt>
+<dd id="reset-budget">—</dd>
+</div>
+</dl>
+</article>
+<article class="card history-card">
+<div class="card-head">
+<div>
+<span class="card-icon blue" aria-hidden="true">↗</span>
+<span>
+<h3>Actividad reciente</h3>
+<small>Eventos informados por el dispositivo</small>
+</span>
+</div>
+<button class="text-btn" data-go="actividad">Ver todo</button>
+</div>
+<div id="recent-events" class="event-list">
+<p class="empty">Aún no hay eventos recibidos.</p>
+</div>
+</article>
+<article class="card support-card">
+<p class="eyebrow">CONTROL LOCAL</p>
+<h3>La alarma vive en la ESP32.</h3>
+<p>El módulo mantiene el LED rojo y la orden de buzzer hasta restablecer la alarma con el botón físico o un comando confirmado. La web no mide las salidas.</p>
+<button class="text-btn" data-go="dispositivo">Ver conexión y pines →</button>
+<a class="guide-link" href="base-informativa.html">Guía de instalación y límites ↗</a>
+</article>
+</div>
+<p class="disclaimer">Prototipo experimental. Una lectura sin alarma no garantiza seguridad ni sustituye una evaluación médica, equipamiento certificado o servicios de emergencia.</p>
+</section>
+<section class="view" id="view-actividad" aria-labelledby="activity-title" hidden>
+<div class="section-intro">
+<div>
+<p class="eyebrow">TRAZABILIDAD LOCAL</p>
+<h2 id="activity-title">Actividad y eventos</h2>
+<p>Hasta 1.000 eventos guardados en este navegador, separados de los últimos 32 eventos de la ESP32.</p>
+</div>
+<div class="section-actions">
+<button class="ghost" id="export-history">Exportar CSV</button>
+<button class="ghost" id="clear-history">Borrar archivo local</button>
+</div>
+</div>
+<div class="summary-grid">
+<article class="summary-card">
+<span>ARCHIVO LOCAL</span>
+<strong id="event-count">0</strong>
+<small>eventos guardados</small>
+</article>
+<article class="summary-card">
+<span>IMPACTOS REGISTRADOS</span>
+<strong id="impact-count">0</strong>
+<small>según el dispositivo</small>
+</article>
+<article class="summary-card">
+<span>MEMORIA DE LA ESP32</span>
+<strong id="ring-count">—</strong>
+<small>hasta 32 eventos por arranque</small>
+</article>
+</div>
+<div class="card">
+<div id="full-events" class="event-list full">
+</div>
+</div>
+<p class="disclaimer">El tiempo de cada evento es desde el arranque del dispositivo; la fecha de recepción corresponde al reloj de este navegador, no al instante del impacto. Borrar el archivo no borra la memoria de la ESP32.</p>
+</section>
+
+<section class="view" id="view-dispositivo" aria-labelledby="device-title" hidden>
+<div class="section-intro">
+<div>
+<p class="eyebrow">ENLACE DE RED LOCAL</p>
+<h2 id="device-title">Dispositivo y conexión</h2>
+<p>El navegador consulta la API del mismo equipo que sirve este panel. No usa los sensores del teléfono.</p>
+</div>
+<a class="ghost" href="base-informativa.html">Guía de instalación ↗</a>
+</div>
+<div class="device-grid">
+<article class="card pairing">
+<span class="big-device" aria-hidden="true">◇</span>
+<h3>ESP32 + MPU6050</h3>
+<p>Conecta el Wi-Fi a la red de tu ESP32. Después abre la dirección local del módulo.</p>
+<form id="device-form">
+<label for="device-address">Dirección local de la ESP32</label>
+<input id="device-address" type="url" required value="http://192.168.4.1" inputmode="url" spellcheck="false">
+<button class="primary" type="submit">Abrir panel de la ESP32</button>
+<p id="device-error" class="form-error" role="status">
+</p>
+</form>
+<small>Este botón abre otra dirección; no empareja ni cambia el origen de la API.</small>
+</article>
+<article class="card">
+<h3>Telemetría del dispositivo</h3>
+<dl class="telemetry">
+<div>
+<dt>Identificador</dt>
+<dd id="device-id">—</dd>
+</div>
+<div>
+<dt>Arranque</dt>
+<dd id="boot-id">—</dd>
+</div>
+<div>
+<dt>Modo</dt>
+<dd id="device-mode">Desconocido</dd>
+</div>
+<div>
+<dt>Muestreo configurado</dt>
+<dd id="sample-rate">No informado</dd>
+</div>
+<div>
+<dt>Secuencia</dt>
+<dd id="sequence-value">—</dd>
+</div>
+</dl>
+<p class="disclaimer">No hay módulos de batería ni GPS en este prototipo.</p>
+</article>
+<article class="card architecture-card">
+<h3>Alarma independiente del navegador</h3>
+<p>La ESP32 conserva la alarma hasta un restablecimiento confirmado: botón físico o comando remoto. Cerrar este panel no silencia el buzzer físico.</p>
+<div class="architecture-flow">
+<span>MPU6050<small>SDA 26 · SCL 27</small>
+</span>
+<i aria-hidden="true">→</i>
+<span>ESP32<small>Umbral fijo 65000</small>
+</span>
+<i aria-hidden="true">→</i>
+<span>Alarma local<small>Rojo 12 · Verde 14 · Buzzer 33</small>
+</span>
+</div>
+<p class="disclaimer">Botón físico: GPIO 25. La disponibilidad de la web no certifica el funcionamiento del circuito. LED rojo y buzzer son órdenes del firmware, no salidas medidas por la web.</p>
+</article>
+</div>
+</section>
+
+</main>
+<nav class="mobile-nav" aria-label="Navegación móvil">
+<button class="nav-item active" data-view="inicio" aria-current="page">
+<span aria-hidden="true">⌂</span>Inicio</button>
+<button class="nav-item" data-view="actividad">
+<span aria-hidden="true">⌁</span>Actividad</button>
+<button class="nav-item" data-view="dispositivo">
+<span aria-hidden="true">◇</span>Dispositivo</button>
+<a class="nav-item" href="base-informativa.html">
+<span aria-hidden="true">↗</span>Guía</a>
+</nav>
+</div>
+<dialog id="impact-modal" aria-labelledby="impact-title" aria-describedby="impact-description">
+<div class="impact-panel">
+<button class="modal-close icon-btn" id="dismiss-alarm" aria-label="Cerrar aviso sin restablecer alarma">×</button>
+<div class="alert-symbol" aria-hidden="true">!</div>
+<p class="alert-eyebrow">ALARMA DEL DISPOSITIVO</p>
+<h2 id="impact-title">Impacto registrado</h2>
+<p id="impact-description">La alarma permanece activa en la ESP32. Cerrar este aviso no la restablece ni confirma el estado de una persona.</p>
+<p class="notice" id="reset-feedback" role="status">Solo un restablecimiento confirmado puede desactivar la alarma.</p>
+<button class="primary" id="modal-reset-button">Restablecer alarma</button>
+<button class="ghost" id="modal-device-button">Ver dispositivo</button>
+<small>Cerrar este aviso no silencia el buzzer físico.</small>
+</div>
+</dialog>
+<div class="toast" id="toast" role="status" hidden>
+</div>
+</body>
+</html>

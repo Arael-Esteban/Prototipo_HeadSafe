@@ -1,0 +1,12 @@
+[
+  {"path":"index.html","url":"/","mime":"text/html; charset=utf-8"},
+  {"path":"app.js","url":"/app.js","mime":"application/javascript; charset=utf-8"},
+  {"path":"styles.css","url":"/styles.css","mime":"text/css; charset=utf-8"},
+  {"path":"base-informativa.html","url":"/base-informativa.html","mime":"text/html; charset=utf-8"},
+  {"path":"guide.css","url":"/guide.css","mime":"text/css; charset=utf-8"},
+  {"path":"assets/favicon.svg","url":"/assets/favicon.svg","mime":"image/svg+xml"},
+  {"path":"assets/images/headsafe-hero.webp","url":"/assets/images/headsafe-hero.webp","mime":"image/webp"},
+  {"path":"assets/images/headsafe-wiring.svg","url":"/assets/images/headsafe-wiring.svg","mime":"image/svg+xml"},
+  {"path":"assets/fonts/Manrope.ttf","url":"/assets/fonts/Manrope.ttf","mime":"font/ttf"},
+  {"path":"assets/fonts/OFL.txt","url":"/assets/fonts/OFL.txt","mime":"text/plain; charset=utf-8"}
+]

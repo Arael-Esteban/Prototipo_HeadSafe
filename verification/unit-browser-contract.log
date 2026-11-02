@@ -1,0 +1,40 @@
+
+> headsafe-esp32-original-design@2.0.0 test
+> node --test tests/*.test.mjs tests/ui-dashboard.mjs
+
+✔ original-design dashboard serves its own local assets and technical guide, not source files (93.8182ms)
+✔ local simulator rejects DNS rebinding hosts and strict reset JSON mismatches (36.3193ms)
+✔ status exposes only original accelerometer telemetry and the reset budget (22.2683ms)
+✔ serves real local assets and rejects unsupported paths and HTTP methods (81.4172ms)
+✔ simulator is explicitly labelled, initially healthy, with uncached status (29.0314ms)
+✔ reset command limit matches firmware and never evicts old identifiers (118.2095ms)
+✔ maximum magnitude uses valid signed 16-bit samples (20.1661ms)
+✔ sensor fault never clears a latched alarm and can recover explicitly (8.8453ms)
+✔ simulator rejects invalid samples and cross-origin writes (26.7268ms)
+✔ impact threshold latches once and only authenticated reset clears it (15.5342ms)
+✔ latched alarm dismisses with Escape without a reset and remains stale offline (1004.2464ms)
+✔ hardware status uses same-origin telemetry, no phone sensors or pretend health (674.7252ms)
+✔ reset sends authenticated exact UUID body and never clears before device acknowledgement (1929.7196ms)
+✔ unverified reset response remains uncertain and retries the same command ID (1157.8201ms)
+✔ PC demo controls call simulation API with token and show sensor failure honestly (2757.8696ms)
+✔ firmware-only sections are accessible on 360px mobile without horizontal overflow (793.5223ms)
+✔ device history deduplicates per boot, exports safe CSV and keeps cleared IDs suppressed (3650.0426ms)
+✔ dismissed alarm does not reopen on polling or sensor failure, and fault is explicit while latched (2525.0555ms)
+✔ a stale displayed sample cannot authorize a remote reset (1277.1844ms)
+✔ hiding the panel invalidates live state and returning requires fresh telemetry (1744.5434ms)
+✔ acknowledged reset with a still-active alarm remains alarmed and permits a new deliberate command (1553.709ms)
+✔ scope contains firmware features only, with no contacts, profile, audio or phone sensors (683.9909ms)
+✔ device address opens a validated local panel and never pretends pairing or cross-origin polling (428.3958ms)
+✔ invalid telemetry never turns unknown state healthy and recovery requires valid data (1507.6621ms)
+✔ polling does not overlap and timeout marks telemetry stale with reset disabled (6633.3957ms)
+✔ reset quota errors are explicit and never change alarm locally (1760.0541ms)
+✔ storage failure warns without breaking telemetry or event rendering (703.021ms)
+✔ remote reset UUID fallback works without secure-context randomUUID (1138.9673ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32586.129

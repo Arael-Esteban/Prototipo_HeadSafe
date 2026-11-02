@@ -1,0 +1,35 @@
+HEADSAFE — ESP32
+
+1. Conecta el MPU-6050: SDA → 26 y SCL → 27, dirección 0x68.
+   LED rojo → 12; LED verde → 14; buzzer → 33; botón entre 25 y GND.
+   Usa masa común, resistencias para los LED y niveles I2C de 3,3 V.
+   Revisa el circuito de GPIO12 al arrancar y usa driver para el buzzer si hace falta.
+
+2. En Arduino IDE, instala «esp32» de Espressif Systems, versión 3.3.2.
+   Si no aparece, añade esta URL en Preferencias → Gestor de tarjetas:
+   https://espressif.github.io/arduino-esp32/package_esp32_index.json
+
+3. Abre firmware/HeadSafe/HeadSafe.ino. Selecciona «ESP32 Dev Module»,
+   el puerto de tu placa y pulsa Subir. La web ya viene incluida;
+   no necesitas copiar archivos a la memoria ni instalar librerías adicionales.
+
+4. Abre el monitor serie a 115200. Copia el nombre de red HeadSafe-…
+   y la contraseña que aparece al arrancar.
+
+5. Conecta el móvil o PC a esa Wi-Fi y abre http://192.168.4.1.
+   Si avisa «sin Internet», mantén la conexión. El panel funciona sin Internet.
+
+USO
+• La alarma permanece activa hasta pulsar el botón físico o confirmar
+  «Restablecer alarma» en la web. Cerrar el aviso no desactiva el buzzer.
+• Descarga el CSV para conservar los eventos. Los 32 eventos de la placa
+  se borran al apagarla. La copia local del navegador es independiente.
+• No se incluyen contactos, GPS, batería estimada ni sensores del teléfono.
+
+DEMO SIN PLACA (opcional)
+Instala Node.js 22 o superior. En esta carpeta ejecuta: npm start
+Abre http://127.0.0.1:8767 y utiliza «Simular impacto».
+
+El firmware es para ESP32 clásico, no C3/S2/S3. Se mantiene el umbral
+|ax| + |ay| > 65000 en cuentas crudas; no son newtons ni un diagnóstico.
+Úsalo solo en una red local de confianza. Prototipo no certificado.

@@ -1,0 +1,6 @@
+test_v2_launcher_is_isolated_from_the_previous_delivery (test_launcher.LauncherTests.test_v2_launcher_is_isolated_from_the_previous_delivery) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.065s
+
+OK

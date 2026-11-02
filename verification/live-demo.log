@@ -1,0 +1,30 @@
+
+> headsafe-esp32-original-design@2.0.0 test:live
+> node --test tests/ui-live.mjs
+
+{
+  "server": "http://127.0.0.1:8767",
+  "widths": [
+    360,
+    390,
+    768,
+    1440
+  ],
+  "browserErrors": [],
+  "externalRequests": [],
+  "screenshots": [
+    "verification/live/dashboard-360.png",
+    "verification/live/dashboard-390.png",
+    "verification/live/dashboard-768.png",
+    "verification/live/dashboard-1440.png"
+  ]
+}
+✔ real PC server: responsive original design, latched alarm, fault, reset, CSV and offline (13451.1202ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13935.9799

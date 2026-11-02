@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+headsafe.db
+node_modules/
+.run/
+artifacts/
+test-results/
+verification/source-provenance.json
+firmware/.toolchain/
+firmware/.build/
+firmware/build/
+

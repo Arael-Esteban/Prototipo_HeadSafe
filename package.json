@@ -1,0 +1,16 @@
+{
+  "name": "headsafe-esp32-original-design",
+  "version": "2.0.0",
+  "private": true,
+  "description": "HeadSafe ESP32: panel Wi-Fi local y demostración, con el diseño original",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs tests/ui-dashboard.mjs",
+    "test:live": "node --test tests/ui-live.mjs",
+    "test:browser": "playwright test",
+    "embed": "python tools/embed-web.py",
+    "build:firmware": "python firmware/build.py"
+  },
+  "devDependencies": {"@playwright/test": "1.64.1"}
+}

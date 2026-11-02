@@ -1,0 +1,12 @@
+
+Running 7 tests using 1 worker
+
+  ok 1 tests\browser.spec.mjs:6:39 › original design: alarm, Escape, acknowledged reset and CSV at 360px (2.6s)
+  ok 2 tests\browser.spec.mjs:6:39 › original design: alarm, Escape, acknowledged reset and CSV at 390px (2.4s)
+  ok 3 tests\browser.spec.mjs:6:39 › original design: alarm, Escape, acknowledged reset and CSV at 768px (1.9s)
+  ok 4 tests\browser.spec.mjs:6:39 › original design: alarm, Escape, acknowledged reset and CSV at 1440px (2.4s)
+  ok 5 tests\browser.spec.mjs:25:1 › offline retains the alarm as stale, disables reset, and recovers with explicit sensor fault (2.8s)
+  ok 6 tests\browser.spec.mjs:33:1 › hardware contract hides simulation without any phone sensor permissions (1.2s)
+  ok 7 tests\browser.spec.mjs:41:1 › offline technical guide has correct pins, no outside requests and fits mobile (450ms)
+
+  7 passed (15.7s)

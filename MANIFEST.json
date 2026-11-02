@@ -1,0 +1,315 @@
+{
+  "createdAt": "2026-10-31T16:39:56.438974-03:00",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 66,
+      "sha256": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 172,
+      "sha256": "4f9c2a690388d28d5345a60d7cc368abdc1cdf2d4d2f6f1827119c322730f3fd"
+    },
+    {
+      "path": "LEEME.txt",
+      "bytes": 1775,
+      "sha256": "b131a52f4ecc64ab16eecd685c89d43fe15f3a9a6194fa8e3b14c01eb0e98a8b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1733,
+      "sha256": "385e42d7aa99f37456695c618b7a0facb9c0079cdfdb5df5058c084f5e299ac8"
+    },
+    {
+      "path": "app.js",
+      "bytes": 18968,
+      "sha256": "fdb95dc2531e967e0068c610ec2c8e194a3aef5aeb326362117262e60677a5ba"
+    },
+    {
+      "path": "assets/favicon.svg",
+      "bytes": 353,
+      "sha256": "077d6ad7b40a7af63b125da9e0fa70e28a7e3f7f79e913c7d6dd64171d4a4c4b"
+    },
+    {
+      "path": "assets/fonts/Manrope.ttf",
+      "bytes": 164700,
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "bytes": 4387,
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+    },
+    {
+      "path": "assets/images/headsafe-hero.webp",
+      "bytes": 32442,
+      "sha256": "97ac03d02ed9c7c08eddf84db84fb008cc7e08908dece4c3d75a42563d4c5243"
+    },
+    {
+      "path": "assets/images/headsafe-wiring.svg",
+      "bytes": 3911,
+      "sha256": "25ce95f50655a5140d195501fa6188d98d1e2169a4734a2c3fc9fab967f53476"
+    },
+    {
+      "path": "base-informativa.html",
+      "bytes": 7384,
+      "sha256": "775ef13cef144a9dad303f1a7e38d7963306f76e21ce94d511464c19e8c62b4e"
+    },
+    {
+      "path": "firmware/HeadSafe/HeadSafe.ino",
+      "bytes": 11154,
+      "sha256": "c9c63f3a5b127dac0689006b2c5dba96b4708f435834f2fb1d64ef14675512eb"
+    },
+    {
+      "path": "firmware/HeadSafe/alarm_core.h",
+      "bytes": 4323,
+      "sha256": "5b0661cecf54ffc435ecd53485337f93f05dbc71850df934d4a6b2177e554b74"
+    },
+    {
+      "path": "firmware/HeadSafe/config.h",
+      "bytes": 139,
+      "sha256": "723efdd88f2e3783711704d8bf8cd368ad0e19f86f0528f8c752804dabe1d880"
+    },
+    {
+      "path": "firmware/HeadSafe/web_assets.h",
+      "bytes": 638356,
+      "sha256": "a4e48ed0a1c240742e86f287e988d3c73e19297b72fab12915b2bbfe17c412ff"
+    },
+    {
+      "path": "firmware/README.md",
+      "bytes": 6591,
+      "sha256": "7f8b72b646b984a21927bd026aa4f455e73507a70269130d4e33dd1cafbd9f94"
+    },
+    {
+      "path": "firmware/build.py",
+      "bytes": 4913,
+      "sha256": "7acb91106f37ba0f43987e50fad7c15c998917284a7a268db4cbffb7ab9ed899"
+    },
+    {
+      "path": "firmware/build/HeadSafe.ino.bin",
+      "bytes": 1103472,
+      "sha256": "6e9389efbdab6ffa4599b1df4d812473bdd903f26a816a7f99a9c6ff9686bb83"
+    },
+    {
+      "path": "firmware/build/HeadSafe.ino.bootloader.bin",
+      "bytes": 25168,
+      "sha256": "e27d5d644e79aef9d4044622273007a5de4c2ef3b80b6d499ba76a3cf93a4e9d"
+    },
+    {
+      "path": "firmware/build/HeadSafe.ino.merged.bin",
+      "bytes": 4194304,
+      "sha256": "7012dd4b33bb39ffc0efe65bc08fa5aa458e78ffaa32e9391284198a39069f6b"
+    },
+    {
+      "path": "firmware/build/HeadSafe.ino.partitions.bin",
+      "bytes": 3072,
+      "sha256": "148b959cbff1c38aa8e1d5c0ba9d612c54997b945e56a63f41223eef650653a1"
+    },
+    {
+      "path": "firmware/build/build-provenance.json",
+      "bytes": 2213,
+      "sha256": "e25977cb11e9e738e1f567107f3ccdbe74a6464a3aae0eed8809e9f211e00fcb"
+    },
+    {
+      "path": "firmware/compile.log",
+      "bytes": 256,
+      "sha256": "c51418b12184773610f0a4176c912f223564918828d60f8f3efe8d0c88c8b540"
+    },
+    {
+      "path": "firmware/web-assets.json",
+      "bytes": 909,
+      "sha256": "e297a863dd97e2094b525eaff722c8a28fd9975add0ea4336bb5da4fc5ed53cd"
+    },
+    {
+      "path": "guide.css",
+      "bytes": 3453,
+      "sha256": "93cffdc10a75852ba4b22d96459f9e937ad94267585922ce9155342a7b7704d1"
+    },
+    {
+      "path": "index.html",
+      "bytes": 11408,
+      "sha256": "1fb5dab3fa4d8c75c6f3db6447c246c0a3de3084aa6c585a9e3a89733de5e267"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 1775,
+      "sha256": "cb9e85141675682e6e571c01e552335ab962adf59b993b6071859daa2379bd34"
+    },
+    {
+      "path": "package.json",
+      "bytes": 566,
+      "sha256": "2b65c1af0a0b955769440a1d6bf915a347e015a3a94cbc4d006fffabc38ac083"
+    },
+    {
+      "path": "playwright.config.mjs",
+      "bytes": 749,
+      "sha256": "6b5acd0966aca1ff6bf7c246766bd969811f983c55e4e5294c45fd9fd9bdbd8e"
+    },
+    {
+      "path": "server.mjs",
+      "bytes": 6030,
+      "sha256": "4b67dd0709d3920e369be7ec243556a8732b4507db0da0502db0ff8484774707"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 15885,
+      "sha256": "12a1a8379cd0d57c8df7372d17a245a8996cec4cf09a6db9be730155d0fe1036"
+    },
+    {
+      "path": "tests/browser.spec.mjs",
+      "bytes": 4666,
+      "sha256": "b73ef839a9e303ef26ae86b2d8d87be3da92a31bb5616c90204a8cf4bd9af094"
+    },
+    {
+      "path": "tests/firmware_assets.py",
+      "bytes": 3021,
+      "sha256": "48c477faca00d2a1db9d883b17d90ac00b3bc0df86c2efb7e1c88173739537b1"
+    },
+    {
+      "path": "tests/firmware_core.cpp",
+      "bytes": 4874,
+      "sha256": "19b4caf260bd393d7aa957ed019cc2a61103ef3425028de14170e52b268c0b95"
+    },
+    {
+      "path": "tests/firmware_run.py",
+      "bytes": 1445,
+      "sha256": "56abe95e6f4b1a9460fe1dbe832d7d44b2e91fc24193ba4954169dc8f2947356"
+    },
+    {
+      "path": "tests/firmware_source.py",
+      "bytes": 1724,
+      "sha256": "dcb0b220c48d621f851a38948de41a4a9a56be55dc8438df939d3287dd8975c1"
+    },
+    {
+      "path": "tests/fixtures/web/index.html",
+      "bytes": 104,
+      "sha256": "53e7dd992020920e9af0241d12eb2e69cb748af4f9ead7048aeeca88577341d5"
+    },
+    {
+      "path": "tests/server-v2.test.mjs",
+      "bytes": 3513,
+      "sha256": "962d069482d96896605daf4f928650ad911935952502ec67dc951d40b9904dc5"
+    },
+    {
+      "path": "tests/server.test.mjs",
+      "bytes": 5431,
+      "sha256": "cd64f1e460914fc7eedfc87e5039e1454a1a69f54199c6b6ee1c1f9139c428c0"
+    },
+    {
+      "path": "tests/test_launcher.py",
+      "bytes": 1013,
+      "sha256": "9fdff533665065ffda84644c659c6a4d574c11beb36366918e856899a666e6ab"
+    },
+    {
+      "path": "tests/ui-dashboard.mjs",
+      "bytes": 18457,
+      "sha256": "4731e8470a0288eeaeb381aa44da6db61f00b83e9f4e2580132485645f30a110"
+    },
+    {
+      "path": "tests/ui-live.mjs",
+      "bytes": 5085,
+      "sha256": "70bff17f11b674b342e90578ac6bb6828042fc8db6d193946aa18065fd06f812"
+    },
+    {
+      "path": "tools/embed-web.py",
+      "bytes": 2950,
+      "sha256": "83cff1f4f79e38e89ba65b4751b7b603577f828a3c054afb8361863bae6a5ecc"
+    },
+    {
+      "path": "tools/launch.py",
+      "bytes": 2506,
+      "sha256": "065cbfa9d1472909b72f3b1f1b221bbf362c7e42df8fcd7eae44e1d39cfb5af1"
+    },
+    {
+      "path": "verification/VERIFICACION.md",
+      "bytes": 3665,
+      "sha256": "c671af46bb115b8f4c6e8e6d771ab1b50843653ddbf0b0d26e10813967470323"
+    },
+    {
+      "path": "verification/browser-acceptance.log",
+      "bytes": 891,
+      "sha256": "0d90a761408781d9bb91e770fd0253fffc1c9154bcfb06f16ad3a0138b278a6b"
+    },
+    {
+      "path": "verification/browser-results.json",
+      "bytes": 10588,
+      "sha256": "565824d017e19c187d0831a83ff1f9f8308d304587d2a818b2d60f3d950828b7"
+    },
+    {
+      "path": "verification/conservacion.json",
+      "bytes": 289,
+      "sha256": "1962fcb67318365018304d1a24bcff8f3d3e3b4270bb8075e4f0360505340bbf"
+    },
+    {
+      "path": "verification/dashboard-1440.png",
+      "bytes": 487103,
+      "sha256": "6f1323144ac1d6882e6f250efbab40e8b401d4276ed738a42cd558feb25bb52c"
+    },
+    {
+      "path": "verification/dashboard-360.png",
+      "bytes": 269583,
+      "sha256": "29c5b46c1b4c1d22ea95be39342503dfa168f2bbb39a7786cec4d42b6864c617"
+    },
+    {
+      "path": "verification/dashboard-390.png",
+      "bytes": 293452,
+      "sha256": "18171dc20d8e7a6fcdd92448ce17bf8b01c3d3c742aff8377ac6b354d9363e04"
+    },
+    {
+      "path": "verification/dashboard-768.png",
+      "bytes": 369658,
+      "sha256": "e5fd8abda928404571646c5c12db5b3de253301894a3af95d29db44529213cbd"
+    },
+    {
+      "path": "verification/firmware-build.log",
+      "bytes": 403,
+      "sha256": "cb25827d97c2522ecfbc0d73ab80cea681b6e1a8bac7167275abd54ef2514e3c"
+    },
+    {
+      "path": "verification/firmware-tests.log",
+      "bytes": 762,
+      "sha256": "4a38220d099e2fbfc9cd75bd8c03e8f6f9f7787b2a7e5c5ead36bee85d63338e"
+    },
+    {
+      "path": "verification/guide-mobile.png",
+      "bytes": 342096,
+      "sha256": "ac7357789b6148068c12c22c4e3d36b37b728829951da8a4b51f660dff7d8eac"
+    },
+    {
+      "path": "verification/launcher.log",
+      "bytes": 252,
+      "sha256": "5589a34c5625ee71af55cc8db74ddf690c8371e1024fd98c7c986b3ceffb4a52"
+    },
+    {
+      "path": "verification/live-demo.log",
+      "bytes": 646,
+      "sha256": "307e037f53b8af8905fc770c9481bd490e71b0d721c5c78ee257186bd857ce53"
+    },
+    {
+      "path": "verification/live/dashboard-1440.png",
+      "bytes": 488577,
+      "sha256": "550ff9c3edce819c22cfc6588f5105b4afb38574ef8ecc56a9ec1cea6a7d4a0b"
+    },
+    {
+      "path": "verification/live/dashboard-360.png",
+      "bytes": 267537,
+      "sha256": "571a0892b76c387bd5ab244625cb5184b7d7f9a12e3911862a2572be45baf29d"
+    },
+    {
+      "path": "verification/live/dashboard-390.png",
+      "bytes": 289020,
+      "sha256": "d9d9a92e0e60a45ff189d5b069be528259aae053143c11a1fa08fba171df3190"
+    },
+    {
+      "path": "verification/live/dashboard-768.png",
+      "bytes": 371438,
+      "sha256": "c43fae4736057fa6ec924cba20675d1aa2581a21dcc8bd2734f4c67cdcace3d4"
+    },
+    {
+      "path": "verification/unit-browser-contract.log",
+      "bytes": 2851,
+      "sha256": "bfe6276be3ea502b3b74b0c5b95c74fb18ec821c0334c99cf8ebe54a05a35636"
+    }
+  ]
+}

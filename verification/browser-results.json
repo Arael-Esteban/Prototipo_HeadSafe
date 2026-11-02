@@ -1,0 +1,360 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Juan Prevals\\Projects\\HeadSafe-ESP32-OriginalDesign\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\Juan Prevals\\Projects\\HeadSafe-ESP32-OriginalDesign\\playwright.config.mjs",
+    "rootDir": "C:/Users/Juan Prevals/Projects/HeadSafe-ESP32-OriginalDesign/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Juan Prevals/Projects/HeadSafe-ESP32-OriginalDesign/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Juan Prevals/Projects/HeadSafe-ESP32-OriginalDesign/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "browser.spec.mjs"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Juan Prevals\\Projects\\HeadSafe-ESP32-OriginalDesign\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Juan Prevals\\Projects\\HeadSafe-ESP32-OriginalDesign\\tests",
+        "snapshotDir": "C:\\Users\\Juan Prevals\\Projects\\HeadSafe-ESP32-OriginalDesign\\tests",
+        "testIgnore": [],
+        "testMatch": "browser.spec.mjs",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8768",
+          "headless": true,
+          "acceptDownloads": true,
+          "launchOptions": {
+            "executablePath": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"
+          },
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "verification/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node server.mjs",
+      "url": "http://127.0.0.1:8768/api/status",
+      "env": {
+        "PORT": "8768"
+      },
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "browser.spec.mjs",
+      "file": "browser.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "original design: alarm, Escape, acknowledged reset and CSV at 360px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2600,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T19:31:58.133Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aed1748819d3efb96fac-d6700c686bae87349ae0",
+          "file": "browser.spec.mjs",
+          "line": 6,
+          "column": 39
+        },
+        {
+          "title": "original design: alarm, Escape, acknowledged reset and CSV at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2425,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T19:32:01.032Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aed1748819d3efb96fac-327471d0bf01af85e922",
+          "file": "browser.spec.mjs",
+          "line": 6,
+          "column": 39
+        },
+        {
+          "title": "original design: alarm, Escape, acknowledged reset and CSV at 768px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1909,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T19:32:03.472Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aed1748819d3efb96fac-bdd12b98f1e7b439e26c",
+          "file": "browser.spec.mjs",
+          "line": 6,
+          "column": 39
+        },
+        {
+          "title": "original design: alarm, Escape, acknowledged reset and CSV at 1440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2434,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T19:32:05.395Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aed1748819d3efb96fac-31c98bc5b8eb0d82b100",
+          "file": "browser.spec.mjs",
+          "line": 6,
+          "column": 39
+        },
+        {
+          "title": "offline retains the alarm as stale, disables reset, and recovers with explicit sensor fault",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2815,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T19:32:07.841Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aed1748819d3efb96fac-fa2c2ca256b80fc7a717",
+          "file": "browser.spec.mjs",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "hardware contract hides simulation without any phone sensor permissions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1160,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T19:32:10.668Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aed1748819d3efb96fac-72541e57d7420c0b5d9f",
+          "file": "browser.spec.mjs",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "offline technical guide has correct pins, no outside requests and fits mobile",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 450,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-31T19:32:11.839Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aed1748819d3efb96fac-c875656cef94efbc5203",
+          "file": "browser.spec.mjs",
+          "line": 41,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-31T19:31:57.144Z",
+    "duration": 15668.729000000001,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

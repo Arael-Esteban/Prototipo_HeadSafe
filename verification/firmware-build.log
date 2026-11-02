@@ -1,0 +1,3 @@
+Embedded 10 allowlisted resources, 124002 gzip bytes: C:\Users\Juan Prevals\Projects\HeadSafe-ESP32-OriginalDesign\firmware\HeadSafe\web_assets.h
+El Sketch usa 1103319 bytes (84%) del espacio de almacenamiento de programa. El máximo es 1310720 bytes.
+Las variables Globales usan 55752 bytes (17%) de la memoria dinámica, dejando 271928 bytes para las variables locales. El máximo es 327680 bytes.

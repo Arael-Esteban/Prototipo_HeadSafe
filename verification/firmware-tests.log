@@ -1,0 +1,14 @@
+PASS core: threshold, signed-min, latch, fault/recovery, peak, reset, event ring, debounce/bounce/hold/rollover, command idempotency/capacity/new-impact retry, same-origin, strict JSON, 900/600Hz tones/rollover
+Embedded 3 allowlisted resources, 351 gzip bytes: C:\Users\Juan Prevals\Projects\HeadSafe-ESP32-OriginalDesign\firmware\tmppxa50wc8\assets.h
+Embedded 3 allowlisted resources, 351 gzip bytes: C:\Users\Juan Prevals\Projects\HeadSafe-ESP32-OriginalDesign\firmware\tmppxa50wc8\assets.h
+PASS: native firmware logic and embedded asset tests
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.801s
+
+OK
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
